@@ -105,7 +105,7 @@ module TwitterAds
         @client.logger.info("Send: #{object.method} #{domain}#{@resource} #{@options[:params]}")
       end
 
-      object.each { |header| @client.logger.info("Header: #{header}: #{object[header]}") }
+      object.each { |header| @client.logger.info("Header: #{header}: #{object[header]}") } if @client.options[:trace_header]
 
       # suppresses body content for non-Ads API domains (eg. upload.twitter.com)
       if object.body && !object.body.empty?
