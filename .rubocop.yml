@@ -32,6 +32,9 @@ Metrics/ParameterLists:
 Performance/Casecmp:
   Enabled: false
 
+Style/MixinGrouping:
+  Enabled: false
+
 Style/MultilineMethodCallBraceLayout:
   Enabled: false
 
@@ -83,4 +86,31 @@ Style/EmptyLinesAroundClassBody:
   Enabled: false
 
 Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/TernaryParentheses:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/VariableNumber:
+  Enabled: false
+
+Style/MultilineIfModifier:
+  Enabled: false
+
+Style/IdenticalConditionalBranches:
+  Enabled: false
+
+Style/EmptyLineAfterMagicComment:
+  Enabled: false
+
+Metrics/BlockLength:
   Enabled: false
