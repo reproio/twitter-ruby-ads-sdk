@@ -118,7 +118,14 @@ module TwitterAds
     end
 
     def handle_error(response)
-      raise TwitterAds::Error.from_response(response) unless response.code < 400
+      if response.error?
+        # batch_save could return errors with the key :operation_errors.
+        if response.body.is_a?(Hash) && response.body.key?(:operation_errors)
+          response.body[:errors] ||= []
+          response.body[:errors].push({operation_errors: response.body[:operation_errors]})
+        end
+        raise TwitterAds::Error.from_response(response)
+      end
       response
     end
 
