@@ -27,6 +27,7 @@ module TwitterAds
 
     # sdk only
     property :to_delete, type: :bool
+    property :operator_type
 
     RESOURCE_COLLECTION = "/#{TwitterAds::API_VERSION}/" +
                           'accounts/%{account_id}/targeting_criteria'.freeze # @api private
